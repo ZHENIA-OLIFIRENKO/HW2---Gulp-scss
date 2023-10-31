@@ -1,0 +1,100 @@
+.recent {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+
+        &__h1 {
+            display: flex;
+            align-items: flex-start;
+            color: #4E4E4E;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &__imgs-text {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__divImg {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 23px;
+        }
+        &__img {
+            width: 160px;
+            height: 140px;
+        }
+        &__text {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__textOne {
+            color: #4E4E4E;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 11px;
+        }
+        &__textTwo {
+            color: #7C7C7C;
+            font-family: Roboto;
+            font-size: 11px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        &__textThree {
+            color: #5C5C5C;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            width: 404px;
+            margin-top: 13px;
+        }
+}
+
+@media screen and (max-width: 767px) {
+    .recent {
+
+        &__imgs-text {
+            display: flex;
+            flex-direction: column;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+        }
+        &__textOne,
+        &__textTwo {
+            flex: 0;
+        }
+        &__textThree {
+            display: none;
+            flex: 0;
+            width: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+        .recent {
+            &__imgs-text {
+                flex-wrap: nowrap;
+            }
+            &__text {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+            }
+            &__divImg {
+                flex: 1;
+                margin-right: 20px;
+            }
+            &__text {
+                flex: 2;
+                padding-left: 0;
+            }
+        }
+}

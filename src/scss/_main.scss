@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 83px;
+        &__divImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__img {
+            max-width: 90%;
+        }
+}
