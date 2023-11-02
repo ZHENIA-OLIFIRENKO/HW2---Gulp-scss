@@ -1,60 +1,127 @@
-/* Общие стили */
-.instagram {
-    margin-top: 78px;
+.inst-section {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 47px;
+    margin-top: 60px;
+}
+
+.inst-section__text {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 5%;
-  
-    &__headText {
-      display: flex;
-      flex-direction: row;
-      position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.inst-section__link {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.inst-section__text p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 78, 78);
+    letter-spacing: 1px;
+}
+.inst-section__text p::before {
+  content: "- ";
+}
+.inst-section__text a {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 78, 78);
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.inst-section__text a::before {
+    content: "- ";
+} 
+.inst-section__text a::before {
+    content: "";
+}
+.inst-section__text a::after {
+    content: " -";
+}
+
+.inst-section__photos {
+    font-size: 0;
+    padding-bottom: 50px;
+}
+.inst-section__photos img {
+    display: inline-block;
+    width: 285px;
+    height: 285px;
+    margin-right: 10px;
+}
+.inst-section__photos img:last-child {
+  margin-right: 0px;
+}
+
+@media (max-width: 1199px) {
+    .wrapper {
+        margin: auto;
+        max-width: 768px;
+        margin-left: 5%;
     }
-  
-    &__lastText {
-      color: #4E4E4E;
-      font-family: Roboto;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 13px;
+    .inst-section__photos {
+        & img {
+            display: inline-block;
+            max-width: 249px;
+            max-height: 249px;
+            margin-right: 9px;
+        }
+        & img:nth-child(3) {
+            margin-right: 0px;
+        }
+        & img:last-child {
+            display: none;
+        }
     }
-  
-    &__page {
-      display: flex;
-      justify-content: flex-end;
-      color: #4E4E4E;
-      font-family: Roboto;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-right: -140%;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        margin: auto;
+        max-width: 768px;
+        margin-left: 5%;
     }
-  
-    &__lastImages {
-      display: flex;
-      flex-direction: row;
+    .inst-section {
+        padding-top: 38px;
     }
-  
-    &__instImg img {
-      width: 200px;
-      margin-right: 6px;
+    .inst-section__text {
+        margin-bottom: 13px;
+
+        & p {
+            font-size: 14px;
+        }
+        & a {
+            display: none;
+        }
     }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .instagram {
-      &__lastImages {
-        display: none;
-      }
+    .inst-section {
+        background-color: transparent;
     }
-  }
-  
-  @media screen and (max-width: 1200px) {
-    .instagram {
-      &__lastImages:nth-child(n+2) {
-        display: block;
-      }
+    .inst-section__photos {
+        & img:nth-child(2) {
+            display: none;
+        }
+        & img:nth-child(3) {
+            display: none;
+        }
     }
-  }
+}
+
+@media (min-width: 1200px) {
+    .inst-section {
+        display: flex;
+        justify-content: center; /* Горизонтальное выравнивание по центру */
+    }
+    
+    .wrapper {
+        max-width: 1200px;
+    }
+}

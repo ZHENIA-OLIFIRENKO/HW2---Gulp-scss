@@ -23,7 +23,13 @@
             font-size: 12px;
             font-weight: 400;
         }
-
+        &__headPAdded {
+            color: #B9B9B9;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 400;
+        }
 
         &__socialMedia {
             display: flex;
@@ -97,4 +103,16 @@
             margin-top: 8px;
             margin-bottom: 47px;
         }
+}
+
+@media (max-width: 767px) {
+    .footer__headPAdded {
+        display: none;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1199px) {
+    .footer__headPAdded {
+        display: block;
+    }
 }

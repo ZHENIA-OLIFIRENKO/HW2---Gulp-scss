@@ -4,7 +4,7 @@
 }
 
 .navbar {
-    position: fixed;
+    // position: static;
     width: 100%;
     color: #000;
     height: 50px;
@@ -55,6 +55,7 @@
 
 @media screen and (max-width: 767px) {
     .navbar {
+        position: fixed;
         box-shadow: none;
         &-container {
             height: max-content;
@@ -135,12 +136,33 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
     .menu-items {
+        height: auto;
         position: absolute;
-        top: -50px;
-        margin-left: -15px;
+        top: 0;
+        margin-left: -12px;
+        margin-top: 50px;
         transition: transform 0.5s all;
         transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-items {
+        width: 1200px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 50px;
+        white-space: nowrap;
+    }
+    
+    .menu-items li {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 0; 
     }
 }
